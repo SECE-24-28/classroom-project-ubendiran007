@@ -1,0 +1,72 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    
+</head>
+<body>
+    <div id="status" style="font-size: larger; text-align: center;">The digital clock </div>
+
+    <div id="clock" style="font-size: large;" >00:00:00</div>
+    
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+
+            let h = now.getHours().toString().padStart(2, '0');
+            let m = now.getMinutes().toString().padStart(2, '0');
+            let s = now.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById("clock").innerHTML = `${h}:${m}:${s}`;
+        }
+
+        
+        setInterval(updateClock, 1000);
+
+       
+        updateClock();
+    </script>
+
+</body>
+</html-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: bisque;">
+
+  
+    <h1>To do List</h1>
+    <input type="text" id="value" placeholder="Enter the text" style="height:30px" >
+    <Button onclick="demo()" style="width:50px; height:30px">Add</Button>
+    <ul id="list"></ul>
+
+    <script>
+        function demo(){
+            
+            let val=document.getElementById("value").value;
+            if(val==""){
+                alert("Input can't be Empty");
+                return;
+            }
+            let li=document.createElement("li");
+            li.textContent=val;
+            list.append(li);
+            value.value="";
+            
+        }
+    </script>
+</body>
+</html>
